@@ -1,0 +1,5 @@
+Warning[205] C:\USERS\YANPI\MPLABXPROJECTS\LAB02.X\BASIC.ASM 1 : Found directive in column 1. (List)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB02.X\BASIC.ASM 20 : Found label after column 1. (STEP_ONE)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB02.X\BASIC.ASM 29 : Found label after column 1. (ODD)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB02.X\BASIC.ASM 36 : Found label after column 1. (EVEN)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB02.X\BASIC.ASM 43 : Found label after column 1. (FINISH)

@@ -1,0 +1,172 @@
+#include "xc.inc"
+GLOBAL _count_primes
+PSECT mytext, local, class=CODE, reloc=2
+ 
+_count_primes:
+    MOVFF 0x001 , 0x012
+    MOVFF 0x002 , 0x001
+    MOVFF 0x012 , 0x002
+    CLRF 0x012
+    
+    MOVFF 0x003 , 0x014
+    MOVFF 0x004 , 0x003
+    MOVFF 0x014 , 0x004
+    CLRF 0x014
+    
+    MOVFF 0x001 , 0x010
+    MOVFF 0x002 , 0x011
+    
+    MOVLW 0x000
+    CPFSEQ 0x001
+    GOTO IS_PRIME
+    MOVLW 0x001
+    CPFSEQ 0x002 
+    GOTO IS_PRIME
+    GOTO CONTINUE
+    
+    IS_PRIME:
+    MOVFF 0x001 , 0x032
+    MOVFF 0x002 , 0x033
+    DECF 0x033, F       ; ??? 1
+    BTFSS STATUS, 0     ; ????? (C=0) -> skip if set
+    DECF 0x032, F       ; ???? 1
+    CHECK_IF_EVEN:
+    BTFSS 0x011 , 0
+    GOTO EVEN
+    GOTO CHECK_ONE
+    
+    CHECK_ONE:
+    MOVLW 0x001
+    CPFSEQ 0x001
+    GOTO CHECK_PRIME
+    
+    CHECK_PRIME:
+    MOVLW 0x02
+    MOVWF 0x013
+    MOVWF 0x023
+    CLRF 0x022
+    DIV:
+    RCALL division
+    MOVLW 0x00
+    BTFSS 0x030 , 0 
+    GOTO NOT_SET
+    GOTO CONT
+    NOT_SET: ; THIS LOOP IS END OR NOT
+    MOVF 0x033 , W
+    CPFSEQ 0x023
+    GOTO CONTT
+    GOTO END_CHECKER_LOW
+    CONTT:
+    INCF 0x023
+    MOVLW 0x00
+    ADDWFC 0x022
+    MOVFF 0x023 , 0x013
+    MOVFF 0x022 , 0x012
+    MOVFF 0x001 , 0x010
+    MOVFF 0x002 , 0x011
+    GOTO DIV
+    
+    END_CHECKER_LOW:
+    MOVF 0x032 , W
+    CPFSEQ 0x022
+    GOTO CONTT
+    GOTO PRIME
+    
+    EVEN:
+    MOVLW 0x002
+    CPFSEQ 0x011
+    GOTO CONT
+    GOTO PRIME
+    PRIME:
+    MOVLW 0x000
+    CPFSEQ 0x010
+    GOTO CONT
+    INCF 0x006
+    MOVLW 0x00
+    ADDWFC 0x005
+    CONT:
+    MOVF 0x001 , W 
+    CPFSEQ 0x003
+    GOTO CONTINUE
+    FINAL_CHECK_LOW:
+    MOVF 0x002 , W 
+    CPFSEQ 0x004
+    GOTO CONTINUE
+    MOVFF 0x006 ,0x001
+    MOVFF 0x005 ,0x002
+    RETURN
+    CONTINUE:
+    INCF 0x002
+    MOVLW 0x000
+    ADDWFC 0x001
+    MOVFF 0x002 , 0x011
+    MOVFF 0x001 , 0x010
+    CLRF 0x030
+    CLRF 0x012
+    CLRF 0x013
+    CLRF 0x050
+    CLRF 0x051
+    GOTO IS_PRIME	   
+    
+    division:
+    ; COMPUTE 2'S
+    NEGF 0x012
+    DECF 0x012
+    NEGF 0x013
+    
+    ; check carry
+    MOVLW 0x001
+    ANDWF STATUS , W
+    ADDWF 0x012
+    
+    CHECK_HIGH:
+    MOVF 0x022, W
+    CPFSGT 0x010 ; skip if 0x010 > 0x022
+    GOTO CHECK_IF_HIGH_EQUAL
+    
+    TWO_COM:
+    ; 2's addition
+    MOVF 0x013, W
+    ADDWF 0x011, F
+    MOVF 0x012, W
+    ADDWFC 0x010, F
+    
+    INCF 0x051
+    MOVLW 0x000
+    ADDWFC 0x050, F
+    GOTO CHECK_HIGH
+    
+    HIGH_LESS:
+    MOVF 0x023, W
+    CPFSGT 0x011 ; skip if 0x011 > 0x023
+    GOTO CHECK_IF_LOW_EQUAL
+    GOTO TWO_COM
+    
+    CHECK_IF_LOW_EQUAL:
+    MOVF 0x011, W
+    CPFSEQ 0x023 ; skip if 0x001 = 0x031
+    GOTO CLEAN
+    GOTO TWO_COM
+    
+    CHECK_IF_HIGH_EQUAL:
+    MOVF 0x010, W
+    CPFSEQ 0x022 ; skip if 0x010 = 0x022
+    GOTO CLEAN
+    GOTO CHECK_IF_HIGH_ZERO
+    
+    CHECK_IF_HIGH_ZERO:
+    MOVLW 0x000
+    CPFSEQ 0x010
+    GOTO HIGH_LESS
+    GOTO HIGH_LESS
+    
+    CLEAN:
+    CLRF 0x051
+    CLRF 0x050
+    MOVLW 0x000
+    CPFSEQ 0x011
+    RETURN
+    CPFSEQ 0x010
+    RETURN
+    INCF 0x030
+    RETURN

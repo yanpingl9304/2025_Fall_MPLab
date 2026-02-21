@@ -1,0 +1,33 @@
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 58 : Found label after column 1. (L1)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 59 : Found label after column 1. (L2)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 60 : Found label after column 1. (STATE)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 61 : Found label after column 1. (COUNTER)
+Warning[205] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 83 : Found directive in column 1. (endm)
+Warning[205] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 107 : Found directive in column 1. (endm)
+Warning[205] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 133 : Found directive in column 1. (endm)
+Warning[203] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 135 : Found opcode in column 1. (goto)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 69 : Found label after column 1. (LOOP2)
+Warning[202] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 70 : Argument out of range.  Least significant bits used.
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 72 : Found label after column 1. (LOOP1)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 69 : Found label after column 1. (LOOP2)
+Warning[202] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 70 : Argument out of range.  Least significant bits used.
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 72 : Found label after column 1. (LOOP1)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 118 : Found label after column 1. (LOOP)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 69 : Found label after column 1. (LOOP2)
+Warning[202] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 70 : Argument out of range.  Least significant bits used.
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 72 : Found label after column 1. (LOOP1)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 69 : Found label after column 1. (LOOP2)
+Warning[202] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 70 : Argument out of range.  Least significant bits used.
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 72 : Found label after column 1. (LOOP1)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 129 : Found label after column 1. (QUIT)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 132 : Found label after column 1. (QUIT_1)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 69 : Found label after column 1. (LOOP2)
+Warning[202] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 70 : Argument out of range.  Least significant bits used.
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 72 : Found label after column 1. (LOOP1)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 93 : Found label after column 1. (LOOP)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 69 : Found label after column 1. (LOOP2)
+Warning[202] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 70 : Argument out of range.  Least significant bits used.
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 72 : Found label after column 1. (LOOP1)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 103 : Found label after column 1. (EXIT)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 106 : Found label after column 1. (EXIT_1)
+Warning[205] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\HARD.ASM 165 : Found directive in column 1. (end)

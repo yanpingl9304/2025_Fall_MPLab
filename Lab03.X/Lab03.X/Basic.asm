@@ -1,0 +1,62 @@
+List p=18f4520
+    #INCLUDE <p18f4520.inc>
+    CONFIG OSC = INTIO67
+    CONFIG WDT = OFF
+    org 0x00
+    
+    MOVLW 0x001
+    MOVWF 0x002
+    
+    CLRF TRISA
+    
+    MOVLW 0xcc
+    MOVWF 0x001
+    
+    RRCF 0x001
+    MOVF STATUS , W
+    ANDWF 0x002 , W
+    IORWF TRISA
+    RLNCF TRISA
+    
+    RRCF 0x001
+    MOVF STATUS , W
+    ANDWF 0x002 , W
+    IORWF TRISA
+    RLNCF TRISA
+
+    RRCF 0x001
+    MOVF STATUS , W
+    ANDWF 0x002 , W
+    IORWF TRISA
+    RLNCF TRISA
+    
+    RRCF 0x001
+    MOVF STATUS , W
+    ANDWF 0x002 , W
+    IORWF TRISA
+    RLNCF TRISA
+    
+    RRCF 0x001
+    MOVF STATUS , W
+    ANDWF 0x002 , W
+    IORWF TRISA
+    RLNCF TRISA
+    
+    RRCF 0x001
+    MOVF STATUS , W
+    ANDWF 0x002 , W
+    IORWF TRISA
+    RLNCF TRISA
+
+    RRCF 0x001
+    MOVF STATUS , W
+    ANDWF 0x002 , W
+    IORWF TRISA
+    RLNCF TRISA
+    
+    RRCF 0x001
+    MOVF STATUS , W
+    ANDWF 0x002 , W
+    IORWF TRISA
+    
+    end

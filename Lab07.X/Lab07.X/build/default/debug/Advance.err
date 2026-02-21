@@ -1,0 +1,9 @@
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\ADVANCE.ASM 58 : Found label after column 1. (STATE)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\ADVANCE.ASM 59 : Found label after column 1. (COUNTER)
+Warning[203] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\ADVANCE.ASM 62 : Found opcode in column 1. (goto)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\ADVANCE.ASM 65 : Found label after column 1. (Loop)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\ADVANCE.ASM 78 : Found label after column 1. (INIT)
+Warning[207] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\ADVANCE.ASM 84 : Found label after column 1. (BACK)
+Warning[203] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\ADVANCE.ASM 89 : Found opcode in column 1. (RETFIE)
+Warning[202] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\ADVANCE.ASM 109 : Argument out of range.  Least significant bits used.
+Warning[205] C:\USERS\YANPI\MPLABXPROJECTS\LAB07.X\ADVANCE.ASM 120 : Found directive in column 1. (end)

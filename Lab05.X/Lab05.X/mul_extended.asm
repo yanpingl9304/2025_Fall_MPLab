@@ -1,0 +1,115 @@
+#include "xc.inc"
+GLOBAL _mul_extended
+PSECT mytext, local, class=CODE, reloc=2
+ 
+_mul_extended:
+    
+    MOVFF 0x001 , 0x012
+    MOVFF 0x002 , 0x001
+    MOVFF 0x012 , 0x002
+    CLRF 0x012
+    
+    MOVFF 0x003 , 0x014
+    MOVFF 0x004 , 0x003
+    MOVFF 0x014 , 0x004
+    CLRF 0x014
+    
+    BTFSS 0x003,7
+    GOTO SKIP_B_POS
+    MOVLW 0x80
+    CPFSEQ 0x003
+    GOTO NOT_B_32768
+    MOVLW 0x00
+    CPFSEQ 0x004
+    GOTO NOT_B_32768
+    INCF 0x020
+    GOTO SKIP_B_POS
+    NOT_B_32768:
+    NEGF 0x003
+    DECF 0x003
+    NEGF 0x004
+    INCF 0x020
+    SKIP_B_POS:
+
+    BTFSS 0x001,7
+    GOTO SKIP_A_POS
+    MOVLW 0x80
+    CPFSEQ 0x001
+    GOTO NOT_A_32768
+    MOVLW 0x00
+    CPFSEQ 0x002
+    GOTO NOT_A_32768
+    INCF 0x020
+    GOTO SKIP_A_POS
+    NOT_A_32768:
+    NEGF 0x001
+    DECF 0x001
+    NEGF 0x002
+    INCF 0x020
+    SKIP_A_POS:
+    
+    NOT_32768:
+    
+    MOVF 0x002, W 
+    MULWF 0x004
+    MOVFF PRODL, 0x013
+    MOVFF PRODH, 0x012
+    
+    MOVF 0x002, W 
+    MULWF 0x003
+    MOVF PRODL , W
+    ADDWF 0x012 , F
+    MOVLW 0x000
+    ADDWFC 0x011
+    MOVF PRODH , W
+    ADDWF 0x011 , F
+    MOVLW 0x000
+    ADDWFC 0x010
+    
+    MOVF 0x001 , W 
+    MULWF 0x004
+    MOVF PRODL , W
+    ADDWF 0x012 , F
+    MOVLW 0x000
+    ADDWFC 0x011
+    MOVF PRODH , W
+    ADDWF 0x011 , F
+    MOVLW 0x000
+    ADDWFC 0x010
+    
+    MOVF 0x001 , W
+    MULWF 0x003
+    MOVF PRODL , W
+    ADDWF 0x011 , F
+    MOVF PRODH , W
+    ADDWF 0x010 , F
+    
+    BTFSC 0x020 , 0
+    GOTO NEG
+    GOTO FINISH
+    NEG:
+    NEGF 0x013
+    DECF 0x013
+    NEGF 0x012
+    DECF 0x012
+    NEGF 0x011
+    DECF 0x011
+    NEGF 0x010
+    DECF 0x010
+    
+    INCF 0x013
+    MOVLW 0x00
+    ADDWFC 0x012
+    ADDWFC 0x011
+    ADDWFC 0x010
+    
+    
+    FINISH:
+    MOVFF 0x010 , 0x004
+    MOVFF 0x011 , 0x003
+    MOVFF 0x012 , 0x002
+    MOVFF 0x013 , 0x001
+    
+    RETURN
+
+

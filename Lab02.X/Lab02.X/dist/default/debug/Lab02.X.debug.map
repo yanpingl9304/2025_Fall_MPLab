@@ -1,0 +1,80 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Wed Sep 24 18:45:46 2025
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x00018e
+                   .cinit    romdata   0x00018e    program   0x000002
+.config_300001_BUILD/DEFAULT/DEBUG/HARD.O    romdata   0x300001    program   0x000001
+.config_300003_BUILD/DEFAULT/DEBUG/HARD.O    romdata   0x300003    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00018f      
+                            0x300001    0x300001      
+                            0x300003    0x300003      
+            402 out of 33048 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+              CHECK_0x400   0x0000ba    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+               CHECK_SWAP   0x000072    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+              CHECK_VALID   0x000058    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                 COUNTING   0x00002c    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                 DIAGONAL   0x00009a    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+            EVEN_NOT_ZERO   0x0000ca    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                FILL_ZERO   0x0000dc    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+     FINDED_SMALLEST_ADDR   0x00015e    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+       FIND_FIRST_NONZERO   0x000108    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+            FIND_SMALLEST   0x00011a    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+       FIND_SMALLEST_ADDR   0x000154    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+       FIND_SMALLEST_INIT   0x000116    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                   FINISH   0x00018a    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+     FINISH_FIND_SMALLEST   0x00013e    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+          FINSIH_COUNTING   0x000040    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                     INIT   0x0000ec    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+             NOT_DIAGONAL   0x000082    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                  NOT_PAL   0x0000a4    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                 NOT_ZERO   0x000132    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                      PAL   0x0000f4    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+  RE_FINDED_SMALLEST_ADDR   0x00017c    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+    RE_FIND_SMALLEST_ADDR   0x000172    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                 STORE_FF   0x0000ac    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 COUNTING   0x00002c    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+          FINSIH_COUNTING   0x000040    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+              CHECK_VALID   0x000058    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+               CHECK_SWAP   0x000072    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+             NOT_DIAGONAL   0x000082    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                 DIAGONAL   0x00009a    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                  NOT_PAL   0x0000a4    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                 STORE_FF   0x0000ac    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+              CHECK_0x400   0x0000ba    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+            EVEN_NOT_ZERO   0x0000ca    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                FILL_ZERO   0x0000dc    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                     INIT   0x0000ec    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                      PAL   0x0000f4    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+       FIND_FIRST_NONZERO   0x000108    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+       FIND_SMALLEST_INIT   0x000116    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+            FIND_SMALLEST   0x00011a    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                 NOT_ZERO   0x000132    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+     FINISH_FIND_SMALLEST   0x00013e    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+       FIND_SMALLEST_ADDR   0x000154    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+     FINDED_SMALLEST_ADDR   0x00015e    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+    RE_FIND_SMALLEST_ADDR   0x000172    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+  RE_FINDED_SMALLEST_ADDR   0x00017c    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+                   FINISH   0x00018a    program     static C:\Users\yanpi\MPLABXProjects\Lab02.X\Hard.asm
+
+
